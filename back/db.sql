@@ -1,4 +1,7 @@
+/* create if not database EXISTS eudora; */
 create database eudora;
+
+use eudora;
 
 create table revendedoras(
    id INT NOT NULL AUTO_INCREMENT,
@@ -32,6 +35,8 @@ create table revendedora(
    causas VARCHAR(10000) CHARACTER SET utf8, /*O que ela já fez*/
    PRIMARY KEY ( id )
 );
+
+
 
 INSERT INTO revendedoras (nome, categoria, pontos, causas)
 VALUES ("Eunice", "begin", 190, "Plantação de árvores da Eudora");
@@ -104,16 +109,22 @@ VALUES ("Luzinete", "grower", 2347, "Gel creme clareador antissinais", "Recife")
 
 INSERT INTO revendedoras (nome, categoria, pontos, causas, cidade)
 VALUES ("Genival", "begin", 1888, "Balm pós-barba", "Recife");
-/* Create New user in new table */
-INSERT INTO revendedoras (nome, categoria, cidade, pontos, causas, bruto_ant, bruto_best, bruto_total, bruto, bruto_ant, bruto_best, bruto_total, bruto)
-VALUES ("Eunice", "", 190, "Plantação de árvores da Eudora");
 
+/* Create New user in new table */
+/* INSERT INTO revendedoras (nome, categoria, cidade, pontos, causas, bruto_ant, bruto_best, bruto_total, bruto, bruto_ant, bruto_best, bruto_total, bruto)
+VALUES ("Eunice", "", 190, "Plantação de árvores da Eudora"); */
+
+
+/*
 UPDATE revendedoras SET pontos=600 WHERE nome='sheila';
 UPDATE revendedoras SET pontos=3600 WHERE nome='bruna';
+*/
+
 
 /*TODO: modificar o banco de dados para ter mais dados sobre as açẽs realizadas pelas revendedoras*/
 
 /* Create New user in new table */
+/*
 INSERT INTO revendedora (nome,
  categoria,
  cidade,
@@ -155,3 +166,4 @@ VALUES ("Eunice",
 	 8,
 	 
 	 "Plantação de árvores da Eudora");
+*/
